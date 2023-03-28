@@ -13,10 +13,7 @@ function onFormSubmit (event) {
     return alert("Заповніть рядки");
   }
 
-  const form = {};
-  form[formElements.email.name] = email;
-  form[formElements.password.name] = password;
-  console.log(form);
+  console.log({email, password});
 
   event.currentTarget.reset();
 }
