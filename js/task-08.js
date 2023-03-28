@@ -12,9 +12,11 @@ function onFormSubmit (event) {
   if (email === "" || password === "") {
     return alert("Заповніть рядки");
   }
-  
-  console.log('email:', email);
-  console.log('password:', password);
+
+  const form = {};
+  form[formElements.email.name] = email;
+  form[formElements.password.name] = password;
+  console.log(form);
 
   event.currentTarget.reset();
 }
